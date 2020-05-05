@@ -1,0 +1,27 @@
+nav ul.nav {
+    list-style-type: none;
+    display: flex;
+
+    li a {
+        text-transform: uppercase;
+        padding: 10px;
+        text-decoration: none;
+        color: #a1129a;
+
+        &:hover {
+            color: #fff;
+        }
+
+        &.is-active {
+            color: #666;
+        }
+
+    }
+}
+
+.router-container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    min-width: 400px;
+}

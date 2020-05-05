@@ -1,0 +1,25 @@
+<div class="container-fluid py-3">
+    <h1 class="text-center mb-5">Starship arena</h1>
+
+    <div class="row justify-content-around">
+        <mat-card *ngFor="let ship of (starships$ | async); let i = index" class="col-4">
+            <mat-card-title>{{ship.name}}</mat-card-title>
+            <mat-card-subtitle>{{ship.model}}</mat-card-subtitle>
+            <span>This side score: </span><span>{{ (score$ | async )[i]}}</span>
+        </mat-card>
+    </div>
+
+    <div class="mt-3 mb-3">
+        <h3 class="text-center">The victory goes to:</h3>
+        <h4 class="text-center">{{(victor$ | async).name}}</h4>
+        
+    </div>
+
+    <div class="row justify-content-around">
+        <button button mat-raised-button 
+            id="reset"
+            color="accent"
+            (click)="reset()"
+        >Get new contestants.</button>
+    </div>
+</div>
